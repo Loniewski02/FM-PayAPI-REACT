@@ -26,13 +26,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screens/Screenshot_1.png)
+![](./screens/Screenshot_2.png)
+![](./screens/Screenshot_3.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/payapi-multipage-website-tO_7IFCBwy)
+- Live Site URL: [Live](https://payapi-five.vercel.app/)
 
 ## My process
 
