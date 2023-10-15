@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import SubscribeForm from '../UI/SubscribeForm';
 
 import styles from './SubscribeSection.module.css';
@@ -9,7 +10,11 @@ const SubscribeSection: React.FC = () => {
 			className={styles.subscribe}
 			id='subscribe'>
 			<Wrapper className={styles['subscribe__wrapper']}>
-				<h2>Ready to start?</h2>
+				<motion.h2
+					initial={{ opacity: 0, x: '-100%' }}
+					whileInView={{ opacity: 1, x: 0, transition: { type: 'spring' } }}>
+					Ready to start?
+				</motion.h2>
 				<SubscribeForm />
 			</Wrapper>
 		</section>

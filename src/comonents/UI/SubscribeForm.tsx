@@ -31,43 +31,47 @@ const SubscribeForm: React.FC<{ id?: string }> = ({ id }) => {
 	};
 
 	return (
-		<Form
-			className={`${styles.form} ${hasError ? styles.invalid : ''}`}
-			onSubmit={handleSubmit}>
-			<label htmlFor={`${id ? id : 'email'}`}></label>
-			<input
-				type='text'
-				id={`${id ? id : 'email'}`}
-				placeholder='Enter email address'
-				onChange={inputValueHandler}
-				onBlur={inputBlurHandler}
-				value={enteredValue}
-			/>
-			<AnimatePresence>
-				{hasError && (
-					<motion.p
-						className={styles['error-text']}
-						initial={{ opacity: 0, y: -30 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -30 }}>
-						Please enter a valid email.
-					</motion.p>
-				)}
-				{succes && !hasError && (
-					<motion.p
-						className={styles.success}
-						initial={{ opacity: 0, y: -30 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -30 }}>
-						Success!
-					</motion.p>
-				)}
-			</AnimatePresence>
-			<DemoButton
-				className={styles['header__info-form-button']}
-				type='submit'
-			/>
-		</Form>
+		<motion.div
+			initial={{ opacity: 0, x: '100%' }}
+			whileInView={{ opacity: 1, x: 0, transition: { type: 'spring' } }}>
+			<Form
+				className={`${styles.form} ${hasError ? styles.invalid : ''}`}
+				onSubmit={handleSubmit}>
+				<label htmlFor={`${id ? id : 'email'}`}></label>
+				<input
+					type='text'
+					id={`${id ? id : 'email'}`}
+					placeholder='Enter email address'
+					onChange={inputValueHandler}
+					onBlur={inputBlurHandler}
+					value={enteredValue}
+				/>
+				<AnimatePresence>
+					{hasError && (
+						<motion.p
+							className={styles['error-text']}
+							initial={{ opacity: 0, y: -30 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0, y: -30 }}>
+							Please enter a valid email.
+						</motion.p>
+					)}
+					{succes && !hasError && (
+						<motion.p
+							className={styles.success}
+							initial={{ opacity: 0, y: -30 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0, y: -30 }}>
+							Success!
+						</motion.p>
+					)}
+				</AnimatePresence>
+				<DemoButton
+					className={styles['header__info-form-button']}
+					type='submit'
+				/>
+			</Form>
+		</motion.div>
 	);
 };
 

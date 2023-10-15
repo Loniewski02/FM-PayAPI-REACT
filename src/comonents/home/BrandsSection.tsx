@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 import Wrapper from '../layout/Wrapper';
@@ -17,7 +18,10 @@ const BrandsSection: React.FC = () => {
 		<section className={styles.brands}>
 			<Wrapper className={styles['brands__wrapper']}>
 				<Brands />
-				<div className={styles['brands__info']}>
+				<motion.div
+					className={styles['brands__info']}
+					initial={{ opacity: 0, y: '10%' }}
+					whileInView={{ opacity: 1, y: 0, transition: { type: 'spring' } }}>
 					<h2>Who we work with</h2>
 					<p>
 						Today, millions of people around the world have successfully connected their accounts to apps they love
@@ -30,7 +34,7 @@ const BrandsSection: React.FC = () => {
 						isBlack={true}>
 						About Us
 					</Button>
-				</div>
+				</motion.div>
 			</Wrapper>
 		</section>
 	);
