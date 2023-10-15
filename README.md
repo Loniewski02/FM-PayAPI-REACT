@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/payapi-multipage-website-tO_7IFCBwy](Solution)
-- Live Site URL: [https://payapi-five.vercel.app/](Live)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/payapi-multipage-website-tO_7IFCBwy)
+- Live Site URL: [Live](https://payapi-five.vercel.app/)
 
 ## My process
 
