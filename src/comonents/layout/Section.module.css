@@ -1,0 +1,40 @@
+.section {
+	position: relative;
+	padding: 4rem 2.4rem;
+}
+
+.section.first {
+	padding: 8rem 2.4rem 4rem;
+}
+
+.section.last {
+	padding: 4rem 2.4rem 8rem;
+}
+
+@media (min-width: 768px) {
+	.section {
+		padding: 5rem 4rem;
+	}
+
+	.section.first {
+		padding: 10rem 4rem 5rem;
+	}
+
+	.section.last {
+		padding: 5rem 4rem 10rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.section {
+		padding: 7.5rem 4rem;
+	}
+
+	.section.first {
+		padding: 15rem 4rem 7.5rem;
+	}
+
+	.section.last {
+		padding: 7.5rem 4rem 10rem;
+	}
+}

@@ -1,0 +1,92 @@
+.plan {
+	padding: 2.4rem 0;
+	text-align: center;
+}
+
+.plan h3 {
+	margin-bottom: 1.7rem;
+	font-size: 2.4rem;
+	color: var(--dark-pink-color);
+	line-height: 133%;
+	letter-spacing: -0.2px;
+}
+
+.plan__text {
+	margin-bottom: 0.8rem;
+	font-size: 1.5rem;
+	color: var(--light-juan-blue-color);
+	line-height: 186%;
+}
+
+.plan__price {
+	font-size: 5.6rem;
+	font-family: 'DM Serif Display', serif;
+	color: var(--juan-blue-color);
+	line-height: 128%;
+	letter-spacing: -0.4px;
+}
+
+.plan ul {
+	position: relative;
+	display: grid;
+	place-items: center;
+	margin: 2.4rem 0;
+	padding: 2.4rem 0;
+	list-style: none;
+}
+
+.plan ul::after,
+.plan ul::before {
+	content: '';
+	position: absolute;
+	right: 0;
+	left: 0;
+	height: 1px;
+	background-color: var(--juan-blue-color);
+	opacity: 0.25;
+}
+
+.plan ul::before {
+	top: 0;
+}
+
+.plan ul::after {
+	bottom: 0;
+}
+
+@media (min-width: 768px) {
+	.plan {
+		padding: 0;
+	}
+
+	.plan h3 {
+		margin-bottom: 1.3rem;
+		line-height: 166%;
+	}
+
+	.plan__price {
+		font-size: 4.8rem;
+		line-height: 150%;
+	}
+}
+
+@media (min-width: 992px) {
+	.plan {
+		text-align: left;
+	}
+
+	.plan h3 {
+		margin-bottom: 1.6rem;
+		font-size: 3.2rem;
+		line-height: 125%;
+	}
+
+	.plan__price {
+		font-size: 5.6rem;
+		line-height: 128%;
+	}
+
+	.plan ul {
+		display: block;
+	}
+}

@@ -1,0 +1,45 @@
+.box {
+	text-align: center;
+}
+
+.box p:first-child {
+	color: var(--juan-blue-color);
+	font-size: 1.6rem;
+	line-height: 175%;
+}
+
+.box p:last-child {
+	color: var(--dark-pink-color);
+	font-size: 5.6rem;
+	font-family: 'DM Serif Display', serif;
+	line-height: 128%;
+	letter-spacing: -0.4px;
+}
+
+@media (min-width: 768px) {
+	.box {
+		position: relative;
+		padding: 1.6rem 0;
+		width: 32%;
+		text-align: left;
+	}
+
+	.box::before,
+	.box::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: var(--juan-blue-color);
+		opacity: 0.25;
+	}
+
+	.box::before {
+		top: 0;
+	}
+
+	.box::after {
+		bottom: 0;
+	}
+}

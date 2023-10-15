@@ -1,0 +1,25 @@
+.nav {
+	/* position: sticky;
+	top: 0;
+	left: 0;
+	right: 0; */
+	height: auto;
+	padding: 4rem 2.4rem 4.8rem;
+}
+
+.nav__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+@media (min-width: 768px) {
+	.nav {
+		padding: 4rem;
+	}
+
+	.nav__wrapper {
+		justify-content: start;
+	}
+}

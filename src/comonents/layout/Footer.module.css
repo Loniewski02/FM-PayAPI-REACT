@@ -1,0 +1,122 @@
+.footer {
+	padding: 4rem 2.4rem 5rem;
+	background-color: var(--mirage-blue-color);
+	background-image: url('../../assets/shared/desktop/bg-pattern-circle.svg');
+	background-repeat: no-repeat;
+	background-position: 50% -40%;
+}
+
+.footer__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	z-index: 1;
+}
+
+.footer__nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+
+.footer__nav a {
+	position: relative;
+	padding: 0.2em;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-decoration: none;
+	color: var(--water-white-color);
+	opacity: 0.7;
+	transition: opacity 0.3s;
+}
+
+.footer__nav a.active {
+	opacity: 1;
+}
+
+.footer__nav a.active::before,
+.footer__nav a.active::after {
+	width: 50%;
+}
+
+.footer__nav a::before,
+.footer__nav a::after,
+.footer__socials a::after,
+.footer__socials a::before {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	width: 0;
+	height: 2px;
+	background-color: var(--dark-pink-color);
+	transition: width 0.3s;
+}
+
+.footer__nav a::before,
+.footer__socials a::before {
+	left: 50%;
+}
+
+.footer__nav a::after,
+.footer__socials a::after {
+	right: 50%;
+}
+
+.footer__nav a:hover::after,
+.footer__nav a:hover::before,
+.footer__socials a:hover::after,
+.footer__socials a:hover::before {
+	width: 50%;
+}
+
+.footer__nav a:hover {
+	opacity: 1;
+}
+
+.footer__socials {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 120px;
+	width: 100%;
+}
+
+.footer__socials a {
+	position: relative;
+	opacity: 0.7;
+	transition: opacity 0.3s;
+}
+
+.footer__socials a:hover {
+	opacity: 1;
+}
+
+@media (min-width: 768px) {
+	.footer {
+		padding: 3.1rem 4rem;
+		background-position: 45vw 10%;
+	}
+
+	.footer__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 2fr 2fr;
+	}
+
+	.footer__nav {
+		flex-direction: row;
+		align-items: center;
+		gap: 30px;
+	}
+
+	.footer__socials {
+		justify-self: end;
+	}
+}
+
+@media (min-width: 992px) {
+	.footer {
+		background-position: 65vw 10%;
+	}
+}

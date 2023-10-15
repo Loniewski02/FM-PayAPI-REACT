@@ -1,0 +1,53 @@
+.header {
+	padding: 0 2.4rem 2rem;
+	text-align: center;
+}
+
+.header__wrapper {
+	max-width: 920px;
+}
+
+.header h2 {
+	margin: 0 auto;
+	max-width: 500px;
+	color: var(--juan-blue-color);
+}
+
+.circle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(55%, -100%);
+	z-index: -1;
+}
+
+@media (min-width: 768px) {
+	.header {
+		padding: 4rem 4rem 2.2rem;
+	}
+
+	.header h2 {
+		max-width: 540px;
+	}
+
+	.circle {
+		transform: translate(65%, -90%);
+	}
+}
+
+@media (min-width: 992px) {
+	.header {
+		position: relative;
+	}
+
+	.header h2 {
+		margin: 0;
+		max-width: 660px;
+		text-align: left;
+		font-size: 5.6rem;
+		line-height: 100%;
+	}
+	.circle {
+		transform: translate(55%, -100%);
+	}
+}

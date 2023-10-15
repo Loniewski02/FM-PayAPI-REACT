@@ -1,0 +1,137 @@
+.header {
+	padding: 0 2.4rem 8rem;
+}
+
+.header__wrapper,
+.header__info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header__img {
+	margin: -2rem 0 0;
+	display: block;
+	height: 240px;
+	z-index: 1;
+}
+
+.header__info-title {
+	margin: 2.4rem;
+	max-width: 430px;
+	font-size: 3.2rem;
+	line-height: 112%;
+	text-align: center;
+	color: var(--juan-blue-color);
+	letter-spacing: -0.2px;
+}
+
+.header__info-text {
+	margin-top: 2.4rem;
+	color: var(--light-juan-blue-color);
+	font-size: 1.5rem;
+}
+
+.header__info-text a {
+	position: relative;
+	padding: 0.2rem;
+	color: var(--light-juan-blue-color);
+	font-weight: bold;
+	text-decoration: none;
+	transition: color 0.3s;
+	z-index: 0;
+}
+
+.header__info-text a:hover {
+	color: var(--water-white-color);
+}
+
+.header__info-text a:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: var(--dark-pink-color);
+	transition: height 0.3s;
+	z-index: -1;
+}
+
+.header__info-text a:hover::before {
+	height: 100%;
+}
+
+.circle {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -71%);
+	z-index: 0;
+}
+
+@media (min-width: 768px) {
+	.header {
+		padding: 3rem 4rem 7.6rem;
+	}
+
+	.header__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 0;
+	}
+
+	.header__img {
+		height: 300px;
+	}
+
+	.header__info-title {
+		margin: 6.2rem 0 2.2rem;
+		max-width: 573px;
+		font-size: 4.8rem;
+		line-height: 116%;
+		letter-spacing: -0.4px;
+	}
+
+	.header__info-text {
+		margin-top: 1.6rem;
+	}
+
+	.circle {
+		transform: translate(-50%, -63%);
+	}
+}
+
+@media (min-width: 992px) {
+	.header__wrapper {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.header__info {
+		align-items: flex-start;
+	}
+
+	.header__img {
+		height: 500px;
+		order: 1;
+	}
+
+	.header__info-title {
+		margin: 0rem 0 2.2rem;
+		max-width: 546px;
+		text-align: left;
+		font-size: 7.2rem;
+		line-height: 100%;
+		letter-spacing: -0.5px;
+	}
+
+	.header__info-text {
+		margin-left: 2.7rem;
+	}
+
+	.circle {
+		transform: translate(15%, -40%);
+	}
+}

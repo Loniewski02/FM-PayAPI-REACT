@@ -1,0 +1,21 @@
+.benefits__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 48px;
+}
+
+.benefits__title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+@media (min-width: 768px) {
+	.benefits__wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}

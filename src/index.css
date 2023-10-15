@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@400;700&display=swap');
+:root {
+	/* primary */
+	--dark-pink-color: #ba4270;
+	--water-white-color: #fbfcfe;
+	/* secondary */
+	--juan-blue-color: #36536b;
+	--mirage-blue-color: #1b262f;
+	--charm-pink-color: #da6d97;
+	--light-juan-blue-color: #6c8294;
+
+	--bg-color: #edf3f8;
+	--red-color: #f00;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--bg-color);
+	font-family: 'Public Sans', sans-serif;
+	font-size: 1.6rem;
+	min-height: 100vh;
+	/* overflow-x: hidden; this does't work on mobile */
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'DM Serif Display', serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+h2 {
+	color: var(--water-white-color);
+	text-align: center;
+	font-size: 3.2rem;
+	line-height: 112.5%;
+	letter-spacing: -0.2px;
+}
+
+#root {
+	overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+	h2 {
+		font-size: 4.8rem;
+		line-height: 116.667%;
+		letter-spacing: -0.4px;
+	}
+}
+
+@media (min-width: 992px) {
+	h2 {
+		font-size: 4.8rem;
+		line-height: 116.667%;
+		letter-spacing: -0.45px;
+	}
+}
