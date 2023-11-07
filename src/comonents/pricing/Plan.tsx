@@ -1,7 +1,9 @@
+import { motion } from 'framer-motion';
+
 import Button from '../UI/Button';
+import PlanItem from './PlanItem';
 
 import styles from './Plan.module.css';
-import PlanItem from './PlanItem';
 
 type Props = {
 	title: string;
@@ -23,7 +25,10 @@ const sendData = (id: string) => {
 
 const Plan: React.FC<Props> = ({ title, description, price, id, items }) => {
 	return (
-		<div className={styles.plan}>
+		<motion.div
+			className={styles.plan}
+			initial={{ opacity: 0, scale: 0 }}
+			whileInView={{ opacity: 1, scale: 1, transition: { type: 'spring' } }}>
 			<h3>{title}</h3>
 			<p className={styles.plan__text}>{description}</p>
 			<p className={styles.plan__price}>${price.toFixed(2)}</p>
@@ -41,9 +46,8 @@ const Plan: React.FC<Props> = ({ title, description, price, id, items }) => {
 				onClick={sendData.bind(null, id)}>
 				Request Access
 			</Button>
-		</div>
+		</motion.div>
 	);
 };
 
 export default Plan;
-

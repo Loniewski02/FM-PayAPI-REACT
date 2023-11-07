@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import Wrapper from './Wrapper';
 
 import circleBg from '../../assets/shared/desktop/bg-pattern-circle.svg';
@@ -9,7 +11,11 @@ const Header: React.FC<Props> = ({ title, short }) => {
 	return (
 		<header className={styles.header}>
 			<Wrapper className={`${short ? styles.header__wrapper : ''}`}>
-				<h2>{title}</h2>
+				<motion.h2
+					initial={{ opacity: 0, x: -300 }}
+					animate={{ opacity: 1, x: 0 }}>
+					{title}
+				</motion.h2>
 				<img
 					src={circleBg}
 					alt=''
