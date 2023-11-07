@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 import circle from '../../assets/shared/desktop/bg-pattern-circle.svg';
 import styles from './HeroSection.module.css';
 
